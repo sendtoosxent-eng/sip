@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#201f1f",
+                      "secondary": "#ffb77d",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-primary": "#735c00",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#bfcdff",
+                      "on-primary-fixed": "#241a00",
+                      "tertiary-fixed": "#dbe1ff",
+                      "primary-container": "#d4af37",
+                      "surface": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-container": "#603100",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "secondary-fixed": "#ffdcc3",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "outline": "#99907c",
+                      "error-container": "#93000a",
+                      "secondary-container": "#fd8b00",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#e5e2e1",
+                      "on-error": "#690005",
+                      "on-tertiary": "#082b72",
+                      "on-primary-fixed-variant": "#574500",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary-fixed": "#00174b",
+                      "surface-variant": "#353534",
+                      "on-primary-container": "#554300",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-tint": "#e9c349",
+                      "primary": "#f2ca50",
+                      "on-secondary": "#4d2600",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#97b0ff",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "surface-bright": "#3a3939",
+                      "on-surface-variant": "#d0c5af",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-primary": "#3c2f00",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#254188",
+                      "surface-container-highest": "#353534",
+                      "surface-container-low": "#1c1b1b",
+                      "inverse-on-surface": "#313030"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Poppins", "sans-serif"],
+                      "body": ["Poppins", "sans-serif"],
+                      "label": ["Poppins", "sans-serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Poppins', sans-serif; font-weight: 300; }
+        .font-serif { font-family: 'Poppins', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 19, 0.8); backdrop-filter: blur(20px); }
+        .gold-gradient { background: linear-gradient(45deg, #f2ca50, #d4af37); }
+        .ghost-border { border: 1px solid rgba(77, 70, 53, 0.25); }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+    </style>
+    </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-neutral-900/80 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20">
+<div class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center w-full">
+<a class="text-xl font-headline font-black text-yellow-500 tracking-tighter" href="#">The Nocturnal Curator</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors font-body text-sm" href="#">Reservations</a>
+<a class="text-orange-500 font-bold border-b-2 border-orange-500 pb-1 font-body text-sm" href="#">Menu</a>
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors font-body text-sm" href="#">Events</a>
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors font-body text-sm" href="#">Gallery</a>
+</nav>
+<button class="gold-gradient text-on-primary px-6 py-2 rounded-lg font-bold scale-95 active:scale-90 transition-transform duration-500 text-sm">
+                Book a Table
+            </button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-end pb-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Atmospheric bar interior" class="w-full h-full object-cover" data-alt="Moody upscale bar interior with amber lighting reflecting off crystal glassware and polished dark wood textures at midnight" src="unnamed.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-3xl">
+<span class="text-primary tracking-widest uppercase text-xs font-bold mb-4 block">The Evening Chapter</span>
+<h1 class="text-6xl md:text-8xl font-headline font-black tracking-tighter text-on-surface mb-6">
+                        Sip Lounge <br/> <span class="text-primary-container">Menu.</span>
+</h1>
+</div>
+</div>
+</section>
+<!-- Category Filter (Subtle Tonal Shift) -->
+<div class="sticky top-[72px] z-40 bg-surface/90 backdrop-blur-md py-6 border-b border-white/5">
+<div class="container mx-auto px-8">
+<div class="flex gap-8 overflow-x-auto no-scrollbar whitespace-nowrap">
+<a class="text-primary font-bold border-b-2 border-primary pb-2 text-sm tracking-wide" href="#signature-cocktails">Signature Cocktails</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm tracking-wide" href="#vintage-cellar">Vintage Cellar</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm tracking-wide" href="#premium-grills">Premium Grills</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm tracking-wide" href="#small-plates">Small Plates</a>
+</div>
+</div>
+</div>
+<!-- Menu Content -->
+<div class="container mx-auto px-8 py-20 space-y-32">
+<!-- Section: Signature Cocktails -->
+<section id="signature-cocktails">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-4">
+<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tight">Signature Cocktails</h2>
+<p class="text-on-surface-variant max-w-md font-light">Artisanal infusions crafted for the nocturnal soul, using hand-pressed botanicals and premium spirits.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Cocktail Item 1 -->
+<div class="group surface-container-low p-4 rounded-xl hover:bg-surface-bright transition-all duration-500 scale-100 hover:scale-[1.02] flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 h-64">
+<img alt="The Kampala Mule" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Exotic cocktail in a copper mug garnished with fresh ginger and mint on a dark slate background with warm rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZZvMJrKGLLKvw4VMNLAN-uf688vHHnOPmcd6kxwHc5tTSo-F7gUj-u6ofyR_Dcvx0HkJQ0xOUD4sxiJYr3Jef7Hz8k70B8v0GIDQCdrRNOwO6og3AYlBzrEd5XKaJV-TykbNa6jrCkYcVZ-XAQWNKEe_PtiG7kuhjj2HDct2DQb8F5ifsDtwT3VvTuvUDcAyqbjTmTboqgGdeey6T__9I_cFf-AlFxAt29rSXE56ru38_6FJNept4xk4BHbA3IOqmVmg7UnC5DcQ"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold">The Kampala Mule</h3>
+<span class="text-primary font-bold">UGX 45k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Local vodka, house-made hibiscus ginger beer, fresh lime, and a dash of Ugandan bird's eye chili.</p>
+<div class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary-container font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_bar</span>
+                            Zesty &amp; Spicy
+                        </div>
+</div>
+<!-- Cocktail Item 2 -->
+<div class="group surface-container-low p-4 rounded-xl hover:bg-surface-bright transition-all duration-500 scale-100 hover:scale-[1.02] flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 h-64">
+<img alt="Midnight Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Rich espresso martini in a crystal coupe glass with three coffee beans floating on creamy foam, dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSsZFLEHuhZ9gN8gG7_HelCvse0LWqeVs9nRiynVhLsW6RCZtp90SgXJd7Z4AuO7tVGAaWWefpqwYWfMeIYvbEaejsjFY7ONh6mffEldFrniH070ItCsu4A9nbglMHs0aSSuBPkRNv7hnFIZAYqJ659DBJjyC49xkZ950HghX7JIQ9dgmgBtSk--FUbXZA4FMlTzYKxDI3yvPH6P47fRu09Rs2UWz6SJSkR6yEdbQxNYepvZJiZElSaFjfSLuZR3iO3DCpPY0g4vc"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold">Midnight Espresso</h3>
+<span class="text-primary font-bold">UGX 52k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">Double shot of Bugisu arabica, dark cacao liqueur, and vanilla-infused aged rum.</p>
+<div class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary-container font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            Energizing
+                        </div>
+</div>
+<!-- Cocktail Item 3 -->
+<div class="group surface-container-low p-4 rounded-xl hover:bg-surface-bright transition-all duration-500 scale-100 hover:scale-[1.02] flex flex-col h-full">
+<div class="overflow-hidden rounded-lg mb-6 h-64">
+<img alt="Velvet Old Fashioned" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Amber liquid in a heavy glass with a large clear ice cube and orange peel twist, dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsp6LR5SMJ2EJPlPjS7qnj-huzPFQbUqV4XfKh1lupaTBm8RW8IRhWqc0cETqe-tHpDMWw5fBmcVM0Rs9J2mBgLHJriTWEmW0q4uP54bo0HAwBMnpKYupvCr2yBG5eCz-DCopk2KMwH-ylJ9yUcTfIL_8cLlwY71o3eATtXbil1J9rr-9uuEc8yy9ZyFPhmxKXCEUUJ2YoXBh3sczlIihlPoIf9r8xA_yJCjgXngwtQbtWxTyZB6u-XSqVs8jaGPT4-N6w5UnjT18"/>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-headline font-bold">Velvet Old Fashioned</h3>
+<span class="text-primary font-bold">UGX 60k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 flex-grow">12-year reserve bourbon, molasses bitters, and a smoke-infused orange peel garnish.</p>
+<div class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary-container font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">vaping_rooms</span>
+                            Smoky &amp; Bold
+                        </div>
+</div>
+</div>
+</section>
+<!-- Section: Premium Grills (Bento/Asymmetric Style) -->
+<section id="premium-grills">
+<div class="mb-12">
+<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tight mb-2">Premium Grills</h2>
+<div class="w-24 h-1 bg-primary mb-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Grill Item (Asymmetric Large) -->
+<div class="md:col-span-7 group relative overflow-hidden rounded-xl h-[500px]">
+<img alt="Dry-Aged Ribeye" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A perfectly seared thick-cut ribeye steak resting on a wooden board with rosemary sprigs and sea salt flakes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNGs8KRVF3gEEoyXJ_vJbO2vxe6lOixFdcX0Ccv_JLyqe0fS3C5quLri7Lq5NhQxXzkkuaae8bTADYPl41LnslCvgv3hHuwYvdbhWWVHUztGufglJ-ZbL-56K-EuI4aEcDwatHnGvLk6SIGdG0wH38btyKOjFtysgZO7OEUXFBRQePTu5zCGrjVbhze9JWuR_Z2TXEqqcZUcpQQud9Til7gUeRdgy1Viwv-FtOQMDKze5iicJRi2V_6eGb9K1fq0aMFoIWv8Aue-I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-3xl font-headline font-black mb-2">Heritage Dry-Aged Ribeye</h3>
+<p class="text-neutral-300 max-w-sm mb-4">400g of prime beef aged for 35 days. Served with bone marrow butter and truffle fries.</p>
+<div class="flex gap-4">
+<span class="text-primary font-bold text-xl">UGX 145k</span>
+</div>
+</div>
+<span class="bg-primary/20 backdrop-blur-md border border-primary/50 text-primary text-xs px-3 py-1 rounded-full uppercase tracking-tighter">Chef's Signature</span>
+</div>
+</div>
+</div>
+<!-- Secondary Grill Items Column -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="surface-container p-6 rounded-xl border-l-4 border-primary">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-headline font-bold">Blackened Sea Bass</h4>
+<span class="text-primary-container font-bold">UGX 95k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Wild-caught bass with a Cajun spice crust, citrus beurre blanc, and sautéed asparagus.</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface/50">Sustainably Sourced</span>
+</div>
+<div class="surface-container p-6 rounded-xl border-l-4 border-primary-container">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-headline font-bold">Lamb Rack Provençal</h4>
+<span class="text-primary-container font-bold">UGX 115k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Herb-crusted lamb racks, red wine reduction, and garlic mash potato.</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface/50">Grass-Fed</span>
+</div>
+<div class="surface-container p-6 rounded-xl border-l-4 border-secondary-container">
+<div class="flex justify-between mb-2">
+<h4 class="text-xl font-headline font-bold">Charred Octopus</h4>
+<span class="text-primary-container font-bold">UGX 88k</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Smoked paprika, chorizo crumbs, potato foam, and salsa verde.</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface/50">Mediterranean Twist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Small Plates & Cellar -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Small Plates -->
+<div id="small-plates">
+<h2 class="text-3xl font-headline font-bold mb-12 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant"></span>
+                        Small Plates
+                    </h2>
+<div class="space-y-6">
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="font-bold group-hover:text-primary transition-colors">Truffle Arancini</h4>
+<p class="text-xs text-on-surface-variant">Wild mushroom, truffle oil, parmesan snow</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+<span class="font-bold text-primary-container">32k</span>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="font-bold group-hover:text-primary transition-colors">Wagyu Sliders</h4>
+<p class="text-xs text-on-surface-variant">Brioche, caramelized onion, secret glaze</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+<span class="font-bold text-primary-container">48k</span>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="font-bold group-hover:text-primary transition-colors">Burrata &amp; Heirloom</h4>
+<p class="text-xs text-on-surface-variant">Basil oil, aged balsamic, toasted pine nuts</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+<span class="font-bold text-primary-container">42k</span>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div>
+<h4 class="font-bold group-hover:text-primary transition-colors">Spiced Calamari</h4>
+<p class="text-xs text-on-surface-variant">Szechuan pepper, lime aioli, crispy leeks</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 h-[1px] bg-outline-variant/30"></span>
+<span class="font-bold text-primary-container">38k</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vintage Cellar (Card Highlight) -->
+<div class="surface-container-high rounded-xl p-8 relative overflow-hidden border border-white/5" id="vintage-cellar">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">wine_bar</span>
+</div>
+<h2 class="text-3xl font-headline font-bold mb-8">Vintage Cellar</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-1 bg-primary"></div>
+<div>
+<h4 class="text-primary-fixed-dim font-bold uppercase tracking-widest text-xs mb-2">Grand Cru Classé</h4>
+<p class="text-lg font-headline italic mb-1">Château Margaux 2015</p>
+<p class="text-on-surface-variant text-sm mb-2">Exquisite balance, notes of dark berries and violet.</p>
+<span class="text-primary font-bold">UGX 1.2M <small class="text-[10px] text-on-surface-variant ml-2">/ Bottle</small></span>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-1 bg-outline-variant"></div>
+<div>
+<h4 class="text-primary-fixed-dim font-bold uppercase tracking-widest text-xs mb-2">Bold Red</h4>
+<p class="text-lg font-headline italic mb-1">Penfolds Grange 2018</p>
+<p class="text-on-surface-variant text-sm mb-2">Australia's finest Shiraz. Full-bodied and structured.</p>
+<span class="text-primary font-bold">UGX 850k <small class="text-[10px] text-on-surface-variant ml-2">/ Bottle</small></span>
+</div>
+</div>
+</div>
+<button class="mt-10 w-full py-4 border border-outline text-on-surface-variant hover:border-primary hover:text-primary transition-all text-xs tracking-[0.2em] uppercase font-bold">
+                        View Full Sommelier List
+                    </button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 full-width py-16 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<p class="text-neutral-600 font-sans text-xs tracking-widest uppercase mb-2">© 2024 The Nocturnal Curator. High-end Kampala Midnight.</p>
+<div class="flex gap-6 mt-4">
+<a class="text-neutral-600 hover:text-orange-500 transition-colors text-xs tracking-widest uppercase" href="#">Privacy</a>
+<a class="text-neutral-600 hover:text-orange-500 transition-colors text-xs tracking-widest uppercase" href="#">Terms</a>
+<a class="text-neutral-600 hover:text-orange-500 transition-colors text-xs tracking-widest uppercase" href="#">Careers</a>
+<a class="text-neutral-600 hover:text-orange-500 transition-colors text-xs tracking-widest uppercase" href="#">Contact</a>
+</div>
+</div>
+<div class="flex gap-8">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">share</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
