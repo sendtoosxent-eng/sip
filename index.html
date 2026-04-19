@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIP LOUNGE | The Nocturnal Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#201f1f",
+                      "secondary": "#ffb77d",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-primary": "#735c00",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#bfcdff",
+                      "on-primary-fixed": "#241a00",
+                      "tertiary-fixed": "#dbe1ff",
+                      "primary-container": "#d4af37",
+                      "surface": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-container": "#603100",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "secondary-fixed": "#ffdcc3",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "outline": "#99907c",
+                      "error-container": "#93000a",
+                      "secondary-container": "#fd8b00",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#e5e2e1",
+                      "on-error": "#690005",
+                      "on-tertiary": "#082b72",
+                      "on-primary-fixed-variant": "#574500",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary-fixed": "#00174b",
+                      "surface-variant": "#353534",
+                      "on-primary-container": "#554300",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-tint": "#e9c349",
+                      "primary": "#f2ca50",
+                      "on-secondary": "#4d2600",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#97b0ff",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "surface-bright": "#3a3939",
+                      "on-surface-variant": "#d0c5af",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-primary": "#3c2f00",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#254188",
+                      "surface-container-highest": "#353534",
+                      "surface-container-low": "#1c1b1b",
+                      "inverse-on-surface": "#313030"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Poppins", "sans-serif"],
+                      "body": ["Poppins", "sans-serif"],
+                      "label": ["Poppins", "sans-serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Poppins', sans-serif; font-weight: 300; }
+        .font-serif { font-family: 'Poppins', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 19, 0.8); backdrop-filter: blur(20px); }
+        .gold-gradient { background: linear-gradient(45deg, #f2ca50, #d4af37); }
+        .ghost-border { border: 1px solid rgba(77, 70, 53, 0.25); }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary selection:text-on-primary font-body">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-xl border-b border-white/5">
+<div class="flex justify-between items-center px-10 py-6 w-full mx-auto max-w-screen-2xl">
+<div class="text-2xl font-bold text-yellow-500 tracking-tighter uppercase"><img src="sip-logo.png" width="100px"> </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-orange-500 border-b-2 border-orange-500 pb-1 font-medium text-slate-200 tracking-tight transition-all ease-in-out duration-500" href="#">Home</a>
+<a class="text-slate-300 transition-colors duration-300 hover:text-yellow-400 font-medium tracking-tight" href="#menu">Menu</a>
+<a class="text-slate-300 transition-colors duration-300 hover:text-yellow-400 font-medium tracking-tight" href="#events">Events</a>
+<a class="text-slate-300 transition-colors duration-300 hover:text-yellow-400 font-medium tracking-tight" href="#gallery">Gallery</a>
+<a class="text-slate-300 transition-colors duration-300 hover:text-yellow-400 font-medium tracking-tight" href="#reservations">Reservations</a>
+</div>
+<a href="reservations.html"><button class="gold-gradient text-on-primary px-8 py-3 rounded hover:brightness-110 transition-all duration-300 font-bold uppercase text-xs tracking-widest">
+            Book a Table
+        </button></a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<video autoplay="" class="w-full h-full object-cover brightness-[0.75]" loop="" muted="" playsinline="">
+<source src="Download (1).mp4" type="video/mp4"/>
+  Your browser does not support the video tag.
+</video>
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-surface/40 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<span class="text-primary font-label tracking-[0.5em] uppercase text-xs mb-8 block font-semibold">The Nocturnal Curator</span>
+<h1 class="font-headline text-5xl md:text-8xl font-bold text-on-surface mb-10 tracking-tighter leading-tight">
+            Where <span class="italic font-light text-primary">Great Vibes</span><br/>Meet Great Taste
+        </h1>
+<div class="flex flex-col md:flex-row gap-8 justify-center items-center">
+<a href="reservations.html"><button class="gold-gradient text-on-primary px-12 py-5 rounded-lg font-bold text-lg hover:shadow-xl transition-all">
+                Reserve Table
+            </button></a>
+<button class="ghost-border text-primary px-12 py-5 rounded-lg font-bold text-lg hover:bg-primary/5 transition-colors">
+                Explore Menu
+            </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+<span class="material-symbols-outlined text-4xl text-primary-fixed">expand_more</span>
+</div>
+</header>
+<!-- About Us Section -->
+<section class="py-32 px-6 md:px-20 bg-surface">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="space-y-10">
+<div class="inline-block px-5 py-1.5 border border-primary/30 rounded-full text-primary text-[10px] font-bold uppercase tracking-[0.3em]">Established MMXXIV</div>
+<h2 class="font-headline text-4xl md:text-6xl font-bold text-on-surface leading-tight">The heartbeat of <span class="text-secondary italic font-light">Kampala's</span> elite nightlife.</h2>
+<p class="text-xl text-on-surface-variant leading-relaxed font-light">
+                Nestled in the vibrant neighborhood of Namasuba, SIP LOUNGE offers an unparalleled sensory journey. From the sizzle of our premium charcoal-grilled meats to the rhythmic pulse of live jazz and curated DJ sets, every detail is designed for the nocturnal connoisseur.
+            </p>
+<div class="grid grid-cols-2 gap-12 pt-8">
+<div>
+<h4 class="text-primary font-bold text-4xl mb-2">Elite</h4>
+<p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-medium">Ambiance &amp; Crowd</p>
+</div>
+<div>
+<h4 class="text-primary font-bold text-4xl mb-2">Premium</h4>
+<p class="text-on-surface-variant text-[11px] uppercase tracking-[0.2em] font-medium">Grills &amp; Spirits</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-6 bg-primary/5 rounded-2xl blur-3xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<img alt="Lounge Atmosphere" class="relative rounded-2xl w-full h-[700px] object-cover shadow-2xl grayscale contrast-125 hover:grayscale-0 transition-all duration-1000" src="2026-02-19 (1).webp"/>
+</div>
+</div>
+</section>
+<!-- Menu Highlight Section -->
+<section class="py-32 bg-surface-container-low" id="menu">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="text-center mb-24 space-y-6">
+<h2 class="font-headline text-5xl md:text-7xl font-bold text-on-surface">Curated Indulgence</h2>
+<div class="w-24 h-0.5 bg-primary mx-auto"></div>
+<p class="text-on-surface-variant max-w-2xl mx-auto text-xl font-light">A selection of artisanal concoctions and masterfully grilled delicacies crafted for those who appreciate the finer things.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Drinks Card -->
+<div class="bg-surface p-12 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 group">
+<div class="mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-primary" data-weight="fill">local_bar</span>
+<h3 class="font-headline text-3xl font-semibold">Signature Cocktails</h3>
+</div>
+<ul class="space-y-8">
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Kampala Mule</span>
+<span class="text-primary font-bold">$12</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Vodka, house-made ginger beer, local lime, and bitters.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Sip Gold Old Fashioned</span>
+<span class="text-primary font-bold">$15</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Bourbon, gold-leaf infused syrup, and aromatic orange.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Obsidian Martini</span>
+<span class="text-primary font-bold">$14</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Gin, blackberry reduction, and dry vermouth.</p>
+</li>
+</ul>
+</div>
+<!-- Grill Card -->
+<div class="bg-surface p-12 rounded-2xl border-2 border-primary/20 shadow-[0_0_50px_rgba(242,202,80,0.05)] transform lg:-translate-y-8 transition-all duration-500">
+<div class="mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-primary" data-weight="fill">outdoor_grill</span>
+<h3 class="font-headline text-3xl font-semibold">Premium Grills</h3>
+</div>
+<ul class="space-y-8">
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Tomahawk Ribeye</span>
+<span class="text-primary font-bold">$45</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">800g grain-fed beef, flame-grilled to perfection.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Grilled Octopus</span>
+<span class="text-primary font-bold">$28</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Smoked paprika, lemon aioli, and charred greens.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Spiced Lamb Chops</span>
+<span class="text-primary font-bold">$32</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Marinated in East African spices, mint chimichurri.</p>
+</li>
+</ul>
+</div>
+<!-- Spirits Card -->
+<div class="bg-surface p-12 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 group">
+<div class="mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-5xl text-primary" data-weight="fill">wine_bar</span>
+<h3 class="font-headline text-3xl font-semibold">Vintage Cellar</h3>
+</div>
+<ul class="space-y-8">
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Single Malt 18y</span>
+<span class="text-primary font-bold">$22</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Highland reserve, notes of peat and dark chocolate.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Champagne Brut</span>
+<span class="text-primary font-bold">$95</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">750ml bottle of our finest house champagne.</p>
+</li>
+<li class="group/item">
+<div class="flex justify-between items-baseline mb-2">
+<span class="text-xl font-semibold">Napa Valley Reserve</span>
+<span class="text-primary font-bold">$60</span>
+</div>
+<p class="text-sm text-on-surface-variant font-light">Cabernet Sauvignon with a bold, velvety finish.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-20 text-center">
+<button class="text-primary border-b border-primary/30 pb-2 text-lg hover:text-secondary hover:border-secondary transition-all italic font-medium">Explore Full Culinary Experience</button>
+</div>
+</div>
+</section>
+<!-- Events Section -->
+<section class="py-32 bg-surface" id="events">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+<div class="max-w-2xl">
+<span class="text-primary font-label tracking-[0.4em] uppercase text-xs mb-4 block font-bold">Upcoming Happenings</span>
+<h2 class="font-headline text-5xl md:text-7xl font-bold">SIP Lounge  Highlights</h2>
+</div>
+<p class="text-on-surface-variant text-lg font-light md:max-w-xs border-l-2 border-primary/20 pl-6">Join us for curated evenings of music, flavor, and elite company.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Featured Highlight -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-3xl aspect-[16/10]">
+<img alt="DJ Party" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 scale-105 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBplD07kqbZKUMXcZxMeYrJgsbCbIjIYf13n0Vp_7mLOaKExz4Mvr5nWDfbmdgsNgkR0TUJQuO3fYImNJ8GGtKFQLYL7q-qNGbi6JyALaCHjcAb3KEnGdfXLYmx97QieazbgoAh4YXa8t-o6ay-51Mqnb1IMjTTed2XGC8b8FgSYDaqq5giJ8hwuPFxjQubwZJmOdajeVAi7yMl-_3iozewZvdtgVHpgQQUi6t9KaMd5AoJ3XM_9rh6aFBAQZ2Ggom3VWwmZl1_vg0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+<div class="absolute top-8 left-8">
+<span class="bg-primary text-black px-4 py-1 rounded text-[10px] font-black uppercase tracking-widest">Featured</span>
+</div>
+<div class="absolute bottom-0 left-0 p-12 space-y-6 w-full md:max-w-2xl">
+<span class="text-secondary font-bold tracking-[0.3em] text-xs uppercase font-medium">Every Friday • 9PM Onwards</span>
+<!-- <h3 class="font-headline text-5xl md:text-6xl font-bold italic leading-tight">Friday Night Fever</h3>
+<p class="text-slate-200 text-lg leading-relaxed opacity-90 font-light">Unleash the weekend with Kampala's top DJs spinning high-energy house and afrobeats. The ultimate destination for the city's pulse.</p> -->
+<div class="flex gap-4 pt-4">
+<button class="gold-gradient text-on-primary px-8 py-3 rounded text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all">Secure RSVP</button>
+<button class="ghost-border text-white px-8 py-3 rounded text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition-all">Details</button>
+</div>
+</div>
+</div>
+<!-- Secondary Highlights -->
+<div class="md:col-span-4 flex flex-col gap-8">
+<!-- Highlight 2 -->
+<div class="group relative overflow-hidden rounded-3xl h-[340px]">
+<img alt="Live Jazz" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsPsXN0IrvpkGVpdhgXWyqmBp6MAZYXTBmFA-h7aKx5r_3uwwtxADsmnrOjIaGQXhDDvW2ZBVbgVgIzhI9pvsR1D1L_0wCkiUSj5CEAzZOm9lTw0QgVvI6Rm-53LsjTAz4xcDoJ83sl_r6iEoXex3_agLQO_d1e5-UEJzJEaD-9qaoQn2XSqazZYgresiu8oQibL8ZicgCMPGXUFszPNYIzNgQfKpThV2eYQJt-hfs4iRdj0pdaGAdogRfvY7EGYJB-w4bbkBeAz4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-3">
+<span class="text-primary font-bold tracking-widest text-[10px] uppercase font-medium">Every Sunday • 7PM</span>
+<h3 class="font-headline text-3xl font-semibold italic">Live Jazz Sundays</h3>
+<p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2 font-light">Sophisticated rhythms and smooth melodies to wrap up your week in style.</p>
+<button class="text-white text-[10px] uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-all font-semibold">Table Reservation</button>
+</div>
+</div>
+<!-- Highlight 3 -->
+<div class="group relative overflow-hidden rounded-3xl h-[340px]">
+<img alt="Tasting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PFGaUD9XEDKCIFku1V3dM0pyEidPzKG4qvlmbRgJ2RowOg0McP0IbcyLPl7TaJkVrFKn8PtgXaSjlyRTeooca4DUvyHaAOrZcdBkYeqYgZbH8IROKqo80kf3jSs2s3S80zWnIRCl8CODuwPPXvZyCQZgOPYqfnoWYDJBEGUjuu1VVwU0MOrrsyuGD7UtZHCjY6UPXC7hU0Y5e_tLxZUQf06s9Z9ndiMtAUPB11Qg6Av2R2pts5P_pGCOKmDmGMD9ZClHPMC9Lsg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 space-y-3">
+<span class="text-primary font-bold tracking-widest text-[10px] uppercase font-medium">Tuesdays • 6PM</span>
+<h3 class="font-headline text-3xl font-semibold italic">Masterclass Mixology</h3>
+<p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2 font-light">Learn the art of the cocktail from our award-winning bartenders.</p>
+<button class="text-white text-[10px] uppercase tracking-widest border-b border-white/30 pb-1 hover:border-white transition-all font-semibold">Join Session</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Bento Grid -->
+<section class="py-32 bg-surface-container-lowest overflow-hidden" id="gallery">
+<div class="max-w-screen-2xl mx-auto px-6">
+<h2 class="font-headline text-5xl mb-16 text-center italic font-bold">The Ambiance</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:h-[800px]">
+<div class="col-span-2 row-span-2 overflow-hidden rounded-2xl">
+<img alt="Bar Interior" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsZ5ZLO8Ut2VjnqgiJ5tBarW55aEICg415ZxqUse46Xd46Wxtl5U2YzaUFDbHoDbES9EJy8Y7_oybBU1b6hqFtaI3v-ySya-_Z9eKdxQQhAJYIieHw2_FQ0F5Q1IdyMOrihlw7ME0h-5g-pcgl1I02Nsw48e9YXYJgfyabuiXCRRS6sVnWL4sglBj7MlMd5frjkIYGfKModrMV6kv7VZ38zexMka6J4DXBm38xCi4q1I6rN2gyS_2Z8Pxn3jwhEtiNcPm6qcrFZjM"/>
+</div>
+<div class="overflow-hidden rounded-2xl">
+<img alt="Cocktail Pour" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB25XZIouMECoYizqnCB9aKF9_G1PVcDBr7izgKQ7_prhUD_l012YHrv9N3wv8GwkYGnC64SoZv4U1GdFvdlhslmxCj5yOKkFV2GWmKcgqLZcBzdl2QGTCDZFS7IemlxgH72cWyeYIL9wFOblPtxlmh818i6HehJqCZJEVaN8bypQwcrv93I7hIEO47XwBtxpkDNrCnJyP1fNmImbV7i4dV5imsXTS6KL73rWx2N45rqgi-Qi46-tttZ2NX98Nl7YidjhHAx1eyQTM"/>
+</div>
+<div class="overflow-hidden rounded-2xl">
+<img alt="Grill Action" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbS--pm0kyfMpjjafWMuzENWXXgC5IXKZZ-3hJ5Y0P_7Ou2WgF7ZLQvk087sf94vXSJ1mynx_pbhk00pX8DXfK7h621jNXiRoC6i7WXZpHKQD7_GmAZ5bGW9wUXS_FQV-R8yRCx9xxzs9DAXS3efdN6cnjCQlFf47vfyEHMl3JAWHtP8Cl8UiPTJRrL2PMfHsjc1fUEsRi3segUhcrJtVCV_TkuCW_uSm2s-TVuuyIrNbVdHvddjBPATNdNrj9HfQ7i7CVp6C1bzY"/>
+</div>
+<div class="col-span-2 overflow-hidden rounded-2xl">
+<img alt="Happy Guests" class="w-full h-full object-cover hover:scale-105 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOqNyHgc9c9vVvaviSABgOJ-Ivk28UdHdeRDk83FY33OhAJqVx1SZpRqFrlT86-nZjNfALZGuUugVLfg0QYFXQdrJrivTO7HJEQPaj3tqkaomhRLnaoBe_QdSk5YN39yxypR95pyaSY9LSSbhgeWvbwjb4uu8dTpLjLZYmDyKgSYw_6VcHsVvIOfcuW1jd6oZJkJrZ_zdPvABVW9Be5CAI0iLq25gwbQL0s9mqeqsJ_bvAlvxPMZsDsfSLV-CQAbc3PRL8wSzlUtw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-32 bg-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[40rem]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+</div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="font-headline text-4xl mb-16 italic font-bold">Voices of the Night</h2>
+<div class="space-y-16">
+<blockquote class="space-y-8">
+<p class="font-headline text-3xl italic text-on-surface-variant leading-relaxed font-light">
+                    "The most sophisticated vibe in Kampala. The Tomahawk steak was perfectly medium-rare, and the cocktails are genuinely world-class. A true gem for the discerning guest."
+                </p>
+<cite class="block font-bold text-primary uppercase tracking-[0.3em] text-xs not-italic">— Arthur M., Kampala Socialite</cite>
+</blockquote>
+<div class="flex justify-center gap-3">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant/30"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant/30"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservations Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/10" id="reservations">
+<div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<span class="text-primary font-label tracking-[0.4em] uppercase text-xs mb-4 block font-bold">Concierge</span>
+<h2 class="font-headline text-6xl mb-8 italic font-bold">Secure Your Spot</h2>
+<p class="text-on-surface-variant text-xl mb-12 font-light leading-relaxed">We recommend booking at least 48 hours in advance for weekend evenings. For groups larger than 10, please contact our events coordinator directly.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-3xl text-primary">phone_in_talk</span>
+<span class="text-lg font-medium">+256 700 000 000</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-3xl text-primary">mail</span>
+<span class="text-lg font-medium">concierge@siplounge.com</span>
+</div>
+</div>
+</div>
+<form class="bg-surface p-12 rounded-3xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] space-y-8 border border-white/5">
+<div class="space-y-3">
+<label class="block text-[10px] font-black uppercase tracking-[0.3em] text-primary">Full Name</label>
+<input class="w-full bg-surface-container-highest border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 rounded-t-lg p-5 text-on-surface transition-all placeholder:text-outline/50 font-body" placeholder="Your Name" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-3">
+<label class="block text-[10px] font-black uppercase tracking-[0.3em] text-primary">Date</label>
+<input class="w-full bg-surface-container-highest border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 rounded-t-lg p-5 text-on-surface font-body" type="date"/>
+</div>
+<div class="space-y-3">
+<label class="block text-[10px] font-black uppercase tracking-[0.3em] text-primary">Guests</label>
+<select class="w-full bg-surface-container-highest border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 rounded-t-lg p-5 text-on-surface font-body">
+<option>2 Persons</option>
+<option>4 Persons</option>
+<option>6 Persons</option>
+<option>10+ Persons</option>
+</select>
+</div>
+</div>
+<button class="w-full gold-gradient text-on-primary font-bold py-5 rounded-xl mt-6 hover:shadow-[0_20px_50px_rgba(242,202,80,0.15)] transition-all uppercase tracking-widest text-sm">Confirm Booking</button>
+</form>
+</div>
+</section>
+<!-- Location & Contact -->
+<section class="py-32 bg-surface">
+<div class="max-w-screen-2xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="space-y-8">
+<h3 class="font-headline text-4xl italic font-bold">Find Us</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                    7HC8+FC2, Namasuba,<br/>
+                    Kampala - Entebbe Road<br/>
+                    Kampala, Uganda
+                </p>
+<a class="inline-flex items-center gap-3 text-primary hover:text-secondary transition-colors text-sm font-bold uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined">directions</span>
+                    Get Directions
+                </a>
+</div>
+<div class="space-y-8">
+<h3 class="font-headline text-4xl italic font-bold">Hours</h3>
+<ul class="space-y-5 text-on-surface-variant text-lg font-light">
+<li class="flex justify-between border-b border-outline-variant/10 pb-2"><span>Mon - Thu</span> <span class="font-medium">4:00 PM - 2:00 AM</span></li>
+<li class="flex justify-between text-secondary font-semibold border-b border-secondary/20 pb-2"><span>Fri - Sat</span> <span>4:00 PM - 5:00 AM</span></li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2"><span>Sunday</span> <span class="font-medium">2:00 PM - Midnight</span></li>
+</ul>
+</div>
+<div class="rounded-3xl overflow-hidden h-72 grayscale contrast-125 border border-white/5">
+<img alt="Map Placeholder" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4PFGaUD9XEDKCIFku1V3dM0pyEidPzKG4qvlmbRgJ2RowOg0McP0IbcyLPl7TaJkVrFKn8PtgXaSjlyRTeooca4DUvyHaAOrZcdBkYeqYgZbH8IROKqo80kf3jSs2s3S80zWnIRCl8CODuwPPXvZyCQZgOPYqfnoWYDJBEGUjuu1VVwU0MOrrsyuGD7UtZHCjY6UPXC7hU0Y5e_tLxZUQf06s9Z9ndiMtAUPB11Qg6Av2R2pts5P_pGCOKmDmGMD9ZClHPMC9Lsg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-950 py-20 px-10 border-t border-neutral-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-screen-2xl mx-auto">
+<div class="space-y-8">
+<div class="text-3xl font-bold text-yellow-600 italic uppercase">SIP LOUNGE</div>
+<p class="text-slate-500 text-base leading-relaxed font-light italic">Defining the nocturnal standards of Kampala. Curating moments, cocktails, and tastes for the elite.</p>
+<div class="flex gap-6">
+<a class="text-slate-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+<a class="text-slate-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+<a class="text-slate-600 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-xl">podcasts</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-10 text-[10px] uppercase tracking-[0.4em]">Navigation</h4>
+<ul class="space-y-6 text-slate-500 text-sm font-medium">
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#">Home</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#menu">Menu</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#events">Events</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#reservations">Reservations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-10 text-[10px] uppercase tracking-[0.4em]">Company</h4>
+<ul class="space-y-6 text-slate-500 text-sm font-medium">
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#">Careers</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#">Press</a></li>
+<li><a class="hover:text-white transition-all hover:translate-x-2 inline-block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-10 text-[10px] uppercase tracking-[0.4em]">Newsletter</h4>
+<p class="text-slate-500 text-sm mb-6 font-light italic">Join our inner circle for exclusive event invites.</p>
+<div class="flex gap-2">
+<input class="bg-neutral-900 border-none rounded-l p-3 text-xs w-full focus:ring-1 focus:ring-yellow-600 text-white font-body" placeholder="Your Email" type="email"/>
+<button class="bg-yellow-600 text-black px-6 py-3 rounded-r font-bold text-[10px] uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto mt-20 pt-10 border-t border-neutral-900 text-center text-slate-600 text-[10px] tracking-[0.3em] font-semibold uppercase">
+        © 2024 SIP LOUNGE. The Nocturnal Curator.
+    </div>
+</footer>
+</body></html>

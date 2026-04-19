@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIP LOUNGE | Reservations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#201f1f",
+                      "secondary": "#ffb77d",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-primary": "#735c00",
+                      "primary-fixed-dim": "#e9c349",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#bfcdff",
+                      "on-primary-fixed": "#241a00",
+                      "tertiary-fixed": "#dbe1ff",
+                      "primary-container": "#d4af37",
+                      "surface": "#131313",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-container": "#603100",
+                      "on-secondary-fixed-variant": "#6e3900",
+                      "secondary-fixed": "#ffdcc3",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "outline": "#99907c",
+                      "error-container": "#93000a",
+                      "secondary-container": "#fd8b00",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#e5e2e1",
+                      "on-error": "#690005",
+                      "on-tertiary": "#082b72",
+                      "on-primary-fixed-variant": "#574500",
+                      "error": "#ffb4ab",
+                      "background": "#131313",
+                      "primary-fixed": "#ffe088",
+                      "on-tertiary-fixed": "#00174b",
+                      "surface-variant": "#353534",
+                      "on-primary-container": "#554300",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-tint": "#e9c349",
+                      "primary": "#f2ca50",
+                      "on-secondary": "#4d2600",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#97b0ff",
+                      "secondary-fixed-dim": "#ffb77d",
+                      "surface-bright": "#3a3939",
+                      "on-surface-variant": "#d0c5af",
+                      "on-secondary-fixed": "#2f1500",
+                      "on-primary": "#3c2f00",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-container": "#254188",
+                      "surface-container-highest": "#353534",
+                      "surface-container-low": "#1c1b1b",
+                      "inverse-on-surface": "#313030"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Poppins", "sans-serif"],
+                      "body": ["Poppins", "sans-serif"],
+                      "label": ["Poppins", "sans-serif"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Poppins', sans-serif; font-weight: 300; }
+        .font-serif { font-family: 'Poppins', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 19, 0.8); backdrop-filter: blur(20px); }
+        .gold-gradient { background: linear-gradient(45deg, #f2ca50, #d4af37); }
+        .ghost-border { border: 1px solid rgba(77, 70, 53, 0.25); }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<header class="bg-neutral-900/80 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/20 sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-serif font-black text-yellow-500 tracking-tighter">
+                <a href="index.html"><img src="sip-logo.png" width="100px"></a>
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors text-sm font-body tracking-wide" href="#">Menu</a>
+<a class="text-orange-500 font-bold border-b-2 border-orange-500 pb-1 text-sm font-body tracking-wide" href="#">Reservations</a>
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors text-sm font-body tracking-wide" href="#">Events</a>
+<a class="text-neutral-400 hover:text-yellow-200 transition-colors text-sm font-body tracking-wide" href="#">Gallery</a>
+</div>
+<button class="gold-gradient text-on-primary px-6 py-2.5 rounded shadow-lg shadow-primary/10 hover:scale-95 active:scale-90 transition-transform duration-500 font-label font-bold text-xs uppercase tracking-widest">
+                Book a Table
+            </button>
+</nav>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" data-alt="atmospheric luxury cocktail bar interior with dim amber lighting and plush velvet seating in a nocturnal setting">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-surface-container-lowest/40 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h1 class="font-serif text-5xl md:text-7xl font-bold text-on-surface tracking-tight mb-4">Secure Your Midnight.</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto opacity-80">Experience the curated atmosphere of SIP LOUNGE. Kampala's most exclusive evening destination.</p>
+</div>
+</section>
+<!-- Reservation Container -->
+<section class="max-w-6xl mx-auto px-6 -mt-32 relative z-20 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Multi-Step Booking Form -->
+<div class="lg:col-span-8 glass-panel rounded-xl p-8 md:p-12">
+<div class="flex items-center justify-between mb-12">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-full border border-primary text-primary flex items-center justify-center font-serif font-bold">01</span>
+<h2 class="font-serif text-2xl font-bold">Booking Details</h2>
+</div>
+<div class="hidden sm:flex gap-1">
+<div class="w-8 h-1 bg-primary rounded"></div>
+<div class="w-8 h-1 bg-surface-container-highest rounded"></div>
+<div class="w-8 h-1 bg-surface-container-highest rounded"></div>
+</div>
+</div>
+<form class="space-y-10">
+<!-- Step 1: Essentials -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Date of Visit</label>
+<input class="bg-surface-container-low border-b border-outline-variant focus:border-primary border-t-0 border-x-0 py-3 text-on-surface outline-none transition-colors" type="date"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Guest Count</label>
+<select class="bg-surface-container-low border-b border-outline-variant focus:border-primary border-t-0 border-x-0 py-3 text-on-surface outline-none transition-colors">
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5-8 Guests (VIP Booth)</option>
+<option>9+ (Private Area)</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Preferred Time</label>
+<select class="bg-surface-container-low border-b border-outline-variant focus:border-primary border-t-0 border-x-0 py-3 text-on-surface outline-none transition-colors">
+<option>20:00</option>
+<option>21:00</option>
+<option>22:00</option>
+<option>23:30</option>
+<option>01:00</option>
+</select>
+</div>
+</div>
+<hr class="border-outline-variant/10"/>
+<!-- Step 2: Personal Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Full Name</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary border-t-0 border-x-0 py-3 text-on-surface outline-none placeholder:text-surface-container-highest transition-colors" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Contact Number</label>
+<input class="bg-transparent border-b border-outline-variant focus:border-primary border-t-0 border-x-0 py-3 text-on-surface outline-none placeholder:text-surface-container-highest transition-colors" placeholder="+256 --- --- ---" type="tel"/>
+</div>
+</div>
+<!-- Step 3: Special Requests -->
+<div class="flex flex-col gap-2">
+<label class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Special Occasion or Preferences</label>
+<textarea class="bg-surface-container-low/30 p-4 border border-outline-variant/20 rounded focus:border-primary outline-none text-on-surface placeholder:text-surface-container-highest transition-colors" placeholder="Let us know if it's a birthday, anniversary, or if you have specific seating preferences." rows="3"></textarea>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-6">
+<p class="text-xs text-on-surface-variant max-w-xs">By proceeding, you agree to our late arrival policy (15-min grace period) and dress code.</p>
+<button class="w-full md:w-auto gold-gradient text-on-primary px-12 py-4 rounded font-bold uppercase tracking-[0.2em] shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-transform duration-300" type="submit">
+                                Confirm Reservation
+                            </button>
+</div>
+</form>
+</div>
+<!-- Sidebar: VIP & Events -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- VIP Section -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden group">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="exclusive VIP section of a lounge with luxury leather armchairs and bottles of champagne on ice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhkP1z462APGrVZN2gmYTRHcWbxhMhIExbw-iLjRRP7vGIVPc6-v4nDyyG1eYWeZZTTc-1PaDtieFlND6yTOFKrNhT14xrV623whTy1YDnHvCjaszUYPSnOlyYwDpYV_D90jaipZxiGYj4WEqZPXiyvzJzLEY-nCSBMbubsB8vlFEQW7PaUX-kXMBMYT7AawXXqY5m6qiMsXegqa93GYKv2hJaPWTvhUap3Q42wunpKs2Kf_dRDFZ3WicJ2dW48p8GAd-OxpwxIzM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="p-8">
+<h3 class="font-serif text-xl font-bold mb-3 text-primary">VIP Booth Selection</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Elevate your evening with our bespoke VIP booths. Includes dedicated bottle service and a private view of the main lounge floor.</p>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:gap-4 transition-all" href="#">
+                                View VIP Packages <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Private Events -->
+<div class="surface-container-lowest p-8 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary mb-4 text-4xl">celebration</span>
+<h3 class="font-serif text-xl font-bold mb-3">Private Curations</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">From corporate soirées to intimate celebrations, SIP LOUNGE offers full venue buyouts and custom catering curations.</p>
+<button class="w-full border border-primary text-primary py-3 rounded text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors duration-500">
+                            Enquire for Events
+                        </button>
+</div>
+<!-- Contact/Location -->
+<div class="p-8 glass-panel rounded-xl">
+<h4 class="text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-6 border-b border-outline-variant/20 pb-2">The Location</h4>
+<div class="space-y-4">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<p class="text-sm">7th Floor, Onyx Plaza, Kampala Central</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<p class="text-sm">Tue - Sun: 18:00 — Late</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- Gallery Teaser -->
+<section class="max-w-7xl mx-auto px-8 pb-32">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="close-up of a premium cocktail with gold leaf garnish and large ice cube in a crystal glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlmIeAGckv_eZRngEGkZVDJduI5mLbsFM8FEcdwxAzmEEC5dy_bXWNuM1d7C6kowXhkHMwWR25j3YhUUXBtwXPs85vFKQU9VkEUqd2RCg_1pN0M_v7grzzYdrJ3iVJ8qFHpAfIfZfMR641i2fdlhpFCgm8-jcl9b5XMl0UtmjGNubDhL9B_M1VYz9UibUdb29Omlf7vAx45B6DRTVP_P7byH98ysCSIbbsOliA9rkPvRvnFSZNoR3WDGUHo4ZRCvEgt3PWneTcTvE"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden group translate-y-8">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="moody lighting reflecting off polished dark wood surfaces in a luxury lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZR5JUugqRRKOCZhyg4Gzjn2e7iVqF1bqSMe7F8fWeCvxvVyiwSomEoJr8Th1spWKVToQ711WWb6YNRHyEMFXys-pQP-bw8x8pOIvYt5MPGAyD4BRAROVrR3fDDQDBexcqj_8XZMzhcL2cjxupXHH8gQcXtAzQcGtZQ7D2s4XIg7DGFox1pArudl5BTAWdit40Q4Z9TEBzVZCAZbKYeNByHCpA5b4Uj3H8P-w0seBFYloVBCeBmVor4Py-Gkkljj2EG2HwgrHTYA"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="jazz performer in silhouette against a warm amber glow in a smoky jazz lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClCwrksYbhZZKmpD-6w-qyFsSK3XsDIC-Zkk9KZveTSwXAnss82xO9mlLZrgE3BG8NinR1yjl5lTSAvrDGHMyjcwBAFwGvB_tj7VUgA6c_hq6qeipm1GiedNUvIqfalU7t3lhdDimLNY8yMcmEXPjkp_rdLuwOcDXYNVS0B4wA0p0H7qHnBLHf795Ms3ty4267i49oGVzSb-yK4mvnMtCAUKsdwUSmaL7C1e9jCrO1IzoWiFkloT2P_ngO9vA4cTLdoIbDbhe-Wug"/>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden group translate-y-8">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="high-end whiskey bottle and glass on a leather coaster with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdk7_q-1j4AlFD2_MRAvm1rwUG0otNiXsGCS2_8PP4vewJgNCOwuqdLO0H4wIyLKUR67aggLz4EZsYz6v-STR2UeTKEj9OyLq6hvTMWeccLcs8UBSt8VTwCYWy6rhf4_6_sAWgnSXXlq8kEflLUlPW2QVhQWF2cDem6uYoora-NxmRvuTtQpjJUFgc3f2DjdRnBX4dJlkHWUmFUUSxo3OlIgpMiKeVPMyoa7n1XyBMtaCDYoiwKt_FuKehy0qVhdCUz0LOdxboimk"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-12 py-16 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-sans text-xs tracking-widest uppercase text-neutral-600">
+                © 2024 SIP Lounge. High-end Kampala Midnight.
+            </div>
+<div class="flex gap-8">
+<a class="font-sans text-xs tracking-widest uppercase text-neutral-600 hover:text-orange-500 transition-colors" href="#">Privacy</a>
+<a class="font-sans text-xs tracking-widest uppercase text-neutral-600 hover:text-orange-500 transition-colors" href="#">Terms</a>
+<a class="font-sans text-xs tracking-widest uppercase text-neutral-600 hover:text-orange-500 transition-colors" href="#">Careers</a>
+<a class="font-sans text-xs tracking-widest uppercase text-neutral-600 hover:text-orange-500 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="text-neutral-600 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">brand_family</span>
+</a>
+<a class="text-neutral-600 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">nest_audio</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
